@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-
 const HomePage = ({data}) => {
     return (
     <>
@@ -10,17 +8,13 @@ const HomePage = ({data}) => {
          {data.map((data)=>{
         return (
           <div className="cardDetails">
-      <div className="image">
-            <img className="image" src={`https://picsum.photos/200?random=${data.id}`} alt="pic"/>
+      <div className="img">
+            <img className="img" src={`https://picsum.photos/200?random=${data.id}`} alt="image"/>
           </div>
-
-        <div className="price">User ID : {data.userId}</div>
-
-          <div className="title">Title : {data.title.slice(0, 20)}... </div>
-
-          <div className="price">Body : {data.body.slice(0, 50)}...</div>
-
-          <Link to= "/DetailPage" className="btn">
+<div className="body">User ID : {data.userId}</div>
+<div className="title">Title : {data.title.slice(0, 15)}... </div>
+<div className="body">Body : {data.body.slice(0, 35)}...</div><br/><br/>
+<Link to= "/DetailPage" className="btn">
              Read More
           </Link>
           </div>
